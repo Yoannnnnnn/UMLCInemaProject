@@ -11,6 +11,13 @@ public class Person {
         return age;
     }
 
+    @Override
+    public String toString() {
+        return "Person{" +
+                "age=" + age +
+                '}';
+    }
+
     public static class PersonBuilder{
         private int age;
 
