@@ -6,7 +6,7 @@ public class Seat {
     private Seat() {
     }
 
-    public Seat(Builder builder) {
+    private Seat(Builder builder) {
         this.seat_number = builder.seat_number;
     }
 
