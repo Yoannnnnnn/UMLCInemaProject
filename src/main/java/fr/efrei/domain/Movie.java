@@ -7,7 +7,6 @@ public class Movie {
     private int schedule;
 
 
-
     public String getTitle() {
         return title;
     }
