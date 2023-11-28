@@ -1,7 +1,7 @@
 package fr.efrei.domain;
 
 public class Adult extends Person {
-    private int price;
+    private int price ;
 
     private Adult(Builder builder) {
         this.price = builder.price;
