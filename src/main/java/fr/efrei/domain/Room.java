@@ -32,11 +32,16 @@ public class Room {
         private int room_number;
         private int [][] tab_seat;
 
-        public Builder setRoom_number(int room_number, int [][] tab_seat) {
+        public Builder setRoom_number(int room_number) {
             this.room_number = room_number;
-            this.tab_seat=tab_seat;
             return this;
         }
+
+        public Builder setTab_seat(int[][] tab_seat) {
+            this.tab_seat = tab_seat;
+            return this;
+        }
+
         public Room build(){
             return new Room (this);
         }

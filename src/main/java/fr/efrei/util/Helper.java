@@ -10,5 +10,9 @@ public class Helper {
         return  n == 0;
     }
 
+    public static boolean isTabNullOrZero(int[][] n){
+        return  n == null;
+    }
+
 
 }
