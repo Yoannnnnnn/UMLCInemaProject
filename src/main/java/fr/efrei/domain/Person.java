@@ -6,10 +6,7 @@ public class Person {
         this.age=builder.age;
     }
 
-    private Person(Adult.Builder builder){}
-
-    public Person() {
-    }
+    private Person(Builder builder){}
 
     public int getAge() {
         return age;
