@@ -2,7 +2,7 @@ package fr.efrei.domain;
 
 public class Child {
     private int price=20;
-    private Child(Child.ChildBuilder builder){
+    private Child(Child.Builder builder){
         this.price=builder.price;
     }
 
@@ -18,14 +18,14 @@ public class Child {
                 '}';
     }
 
-    public static class ChildBuilder{
+    public static class Builder{
         private int price=20;
 
-        public ChildBuilder(int price) {
+        public Builder(int price) {
             this.price = price;
         }
 
-        public Child.ChildBuilder setAge(Child.ChildBuilder builder) {
+        public Child.Builder setAge(Child.Builder builder) {
             this.price = builder.price;
             return this;
         }

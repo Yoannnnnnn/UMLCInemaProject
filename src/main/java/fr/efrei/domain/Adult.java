@@ -1,13 +1,14 @@
 package fr.efrei.domain;
 
-public class Adult  {
-    private int price=20;
-    private Adult(AdultBuilder builder){
-        this.price=builder.price;
+public class Adult extends Person {
+    private int price;
+
+    private Adult(Builder builder) {
+        this.price = builder.price;
     }
 
-    private Adult(){}
-    public int getAge() {
+    // Getter method should be named getPrice
+    public int getPrice() {
         return price;
     }
 
@@ -18,20 +19,21 @@ public class Adult  {
                 '}';
     }
 
-    public static class AdultBuilder{
-        private int price=20;
+    public static class Builder {
+        private int price = 20;
 
-        public AdultBuilder(int price) {
+        public Builder(int price) {
             this.price = price;
         }
 
-        public AdultBuilder setAge(AdultBuilder builder) {
-            this.price = builder.price;
+        // Change the method name to something like setPrice
+        public Builder setPrice(int price) {
+            this.price = price;
             return this;
         }
-        public Adult build(){
+
+        public Adult build() {
             return new Adult(this);
         }
     }
-
 }
