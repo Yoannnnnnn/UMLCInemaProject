@@ -2,8 +2,6 @@ package fr.efrei.domain;
 
 public class Person {
     private int age;
-    private Child price_child;
-    private Adult price_adult;
     private Person(Builder builder){
         this.age=builder.age;
     }
