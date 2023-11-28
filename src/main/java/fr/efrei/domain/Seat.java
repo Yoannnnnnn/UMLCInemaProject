@@ -3,6 +3,7 @@ package fr.efrei.domain;
 public class Seat {
     private int seat_number;
 
+
     private Seat() {
     }
 
@@ -13,6 +14,7 @@ public class Seat {
     public int getSeat_number() {
         return seat_number;
     }
+
 
     @Override
     public String toString() {
