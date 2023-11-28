@@ -1,28 +1,26 @@
 package fr.efrei.factory;
 import fr.efrei.domain.Movie;
 import fr.efrei.util.Helper;
-import fr.efrei.domain.Cinema;
-import fr.efrei.domain.Person;
-import fr.efrei.domain.Room;
-import fr.efrei.domain.Movie;
-import fr.efrei.domain.Ticket;
 
 public class MovieFactory {
-    public static Movie createMovie(String title, ...){
-        if(Helper.isNullorEmpty(title) || Helper.isNullorEmpty(...an attribute))
+    public static Movie createMovie(String title) {
+        if (Helper.isNullOrEmpty(title))
             return null;
 
-        if (... == null)
-            return null;
-
-        return new Movie.Builder().set...
-                                  .set...
-                                  .build();
+        return new Movie.Builder()
+                .setTitle(title)
+                .build();
     }
 
-    public static Cinema createCinema(attribute...){
+    public static Movie createMovie(int age_restriction, int duration, int schedule) {
+        if (Helper.isNullOrZero(age_restriction) || Helper.isNullOrZero(duration) || Helper.isNullOrZero(schedule))
+            return null;
+
+        return new Movie.Builder()
+                .setAge_restriction(age_restriction)
+                .setDuration(duration)
+                .setSchedule(schedule)
+                .build();
+    }
 }
 
-    public static Ticket createTicket(attribute){
-
-    }
