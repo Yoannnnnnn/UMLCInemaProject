@@ -2,7 +2,7 @@ package fr.efrei.domain;
 
 public class Person {
     private int age;
-    private Person(PersonBuilder builder){
+    private Person(Builder builder){
         this.age=builder.age;
     }
 
@@ -18,15 +18,18 @@ public class Person {
                 '}';
     }
 
-    public static class PersonBuilder{
+    public static class Builder{
         private int age;
 
-        public PersonBuilder(int age) {
+        public Builder(int age) {
             this.age = age;
         }
 
-        public PersonBuilder setAge(PersonBuilder builder) {
-            this.age = builder.age;
+        public Builder() {
+        }
+
+        public Builder setAge(int age) {
+            this.age = age;
             return this;
         }
         public Person build(){

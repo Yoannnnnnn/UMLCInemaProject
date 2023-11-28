@@ -8,7 +8,7 @@ public class Cinema {
 
     }
 
-    private Cinema (CinemaBuilder builder){
+    private Cinema (Builder builder){
         this.cinema_name = builder.cinema_name;
         this.roomlist = builder.roomlist;
     }
@@ -21,18 +21,26 @@ public class Cinema {
         return roomlist;
     }
 
-    public static class CinemaBuilder{
+    public static class Builder{
         private String cinema_name;
         private List <Room> roomlist;
 
-        public CinemaBuilder(String cinema_name, List<Room> roomlist){
+        public Builder(String cinema_name, List<Room> roomlist){
             this.cinema_name = cinema_name;
             this.roomlist = roomlist;
         }
 
-        public CinemaBuilder setCinema_name(CinemaBuilder builder) {
-            this.cinema_name = builder.cinema_name;
-            this.roomlist = builder.roomlist;
+        public Builder(){
+
+        }
+
+        public Builder setCinema_name(String cinema_name) {
+            this.cinema_name = cinema_name;
+            return this;
+        }
+
+        public Builder setRoomlist(List<Room> roomlist) {
+            this.roomlist = roomlist;
             return this;
         }
 

@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fea3d376-d53b-4c7f-b81e-e481a13d63e2" name="Changes" comment="I updated the MovieFactory">
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/efrei/factory/PersonFactory.java" afterDir="false" />
+    <list default="true" id="fea3d376-d53b-4c7f-b81e-e481a13d63e2" name="Changes" comment="I updated the CinemaFactory, Person factory was done by Arthur">
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/efrei/factory/CinemaFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/efrei/domain/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/efrei/domain/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/efrei/factory/MovieFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/efrei/factory/MovieFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/efrei/util/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/efrei/util/Helper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/efrei/domain/Cinema.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/efrei/domain/Cinema.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/efrei/domain/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/efrei/domain/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/efrei/factory/PersonFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/efrei/factory/PersonFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +72,7 @@
       <workItem from="1700678742401" duration="602000" />
       <workItem from="1700749216525" duration="3966000" />
       <workItem from="1700773833923" duration="389000" />
-      <workItem from="1701157286144" duration="4040000" />
+      <workItem from="1701157286144" duration="6738000" />
     </task>
     <task id="LOCAL-00001" summary="I created Movie class">
       <created>1700415033571</created>
@@ -109,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700774202936</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="I updated the MovieFactory">
+      <created>1701163754063</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1701163754063</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,6 +129,7 @@
     <MESSAGE value="I create Ticket class" />
     <MESSAGE value="Here is the project for now" />
     <MESSAGE value="I updated the MovieFactory" />
-    <option name="LAST_COMMIT_MESSAGE" value="I updated the MovieFactory" />
+    <MESSAGE value="I updated the CinemaFactory, Person factory was done by Arthur" />
+    <option name="LAST_COMMIT_MESSAGE" value="I updated the CinemaFactory, Person factory was done by Arthur" />
   </component>
 </project>
