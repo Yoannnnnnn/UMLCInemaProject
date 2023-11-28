@@ -6,8 +6,8 @@ public class Helper {
         return ((s==null) || (s.isEmpty()));
     }
 
-    public static boolean isNullOrZero(Integer n){
-        return ((n == null) || (n == 0));
+    public static boolean isNullOrZero(int n){
+        return  n == 0;
     }
 
 

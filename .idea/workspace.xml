@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fea3d376-d53b-4c7f-b81e-e481a13d63e2" name="Changes" comment="I updated the CinemaFactory, Person factory was done by Arthur">
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/efrei/factory/CinemaFactory.java" afterDir="false" />
+    <list default="true" id="1752aad3-848e-4ab9-9016-0911cc7da8c5" name="Changes" comment="CinemaFactory update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/efrei/domain/Cinema.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/efrei/domain/Cinema.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/efrei/domain/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/efrei/domain/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/efrei/factory/PersonFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/efrei/factory/PersonFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/efrei/repository/red.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/efrei/util/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/efrei/util/Helper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +62,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fea3d376-d53b-4c7f-b81e-e481a13d63e2" name="Changes" comment="" />
+      <changelist id="1752aad3-848e-4ab9-9016-0911cc7da8c5" name="Changes" comment="CinemaFactory update" />
       <created>1700414516939</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -73,6 +72,7 @@
       <workItem from="1700749216525" duration="3966000" />
       <workItem from="1700773833923" duration="389000" />
       <workItem from="1701157286144" duration="6738000" />
+      <workItem from="1701173043771" duration="72000" />
     </task>
     <task id="LOCAL-00001" summary="I created Movie class">
       <created>1700415033571</created>
@@ -121,6 +121,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="I created Movie class" />
