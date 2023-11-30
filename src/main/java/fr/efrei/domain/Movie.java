@@ -3,8 +3,10 @@ package fr.efrei.domain;
 public class Movie {
     private String title;
     private int age_restriction;
-    private int duration;
-    private int schedule;
+    private int runningTime;
+    private int scheduled;
+    private int ticketPrice;
+    private String description;
 
 
     public String getTitle() {
@@ -15,12 +17,20 @@ public class Movie {
         return age_restriction;
     }
 
-    public int getDuration() {
-        return duration;
+    public int getRunningTime() {
+        return runningTime;
     }
 
-    public int getSchedule() {
-        return schedule;
+    public int getScheduled() {
+        return scheduled;
+    }
+
+    public int getTicketPrice() {
+        return ticketPrice;
+    }
+
+    public String getDescription() {
+        return description;
     }
 
     private Movie (){
@@ -28,22 +38,29 @@ public class Movie {
     }
     private Movie (Builder builder){
         this.age_restriction = builder.age_restriction;
-        this.duration = builder.duration;
-        this.schedule = builder.schedule;
+        this.runningTime = builder.runningTime;
+        this.scheduled = builder.scheduled;
         this.title = builder.title;
+        this.ticketPrice = builder.ticketPrice;
+        this.description = builder.description;
     }
 
     public static class Builder{
         private String title;
         private int age_restriction;
-        private int duration;
-        private int schedule;
+        private int runningTime;
+        private int scheduled;
+        private int ticketPrice;
+        private String description;
 
-        public Builder(String title, int age_restriction, int duration, int schedule) {
+
+        public Builder(String title, int age_restriction, int runningTime, int scheduled, int ticketPrice, String description) {
             this.title = title;
             this.age_restriction = age_restriction;
-            this.duration = duration;
-            this.schedule = schedule;
+            this.runningTime = runningTime;
+            this.scheduled = scheduled;
+            this.ticketPrice = ticketPrice;
+            this.description = description;
         }
 
         public Builder(){
@@ -60,13 +77,23 @@ public class Movie {
             return this;
         }
 
-        public Builder setDuration(int duration) {
-            this.duration = duration;
+        public Builder setRunningTime(int runningTime) {
+            this.runningTime = runningTime;
             return this;
         }
 
-        public Builder setSchedule(int schedule) {
-            this.schedule = schedule;
+        public Builder setSchedule(int scheduled) {
+            this.scheduled = scheduled;
+            return this;
+        }
+
+        public Builder setTicketPrice(int ticketPrice) {
+            this.ticketPrice = ticketPrice;
+            return this;
+        }
+
+        public Builder setDescription(String description) {
+            this.description = description;
             return this;
         }
 
