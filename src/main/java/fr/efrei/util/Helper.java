@@ -14,7 +14,6 @@ public class Helper {
     public static boolean isTabNullOrZero(int[][] n){
         return  n == null;
     }
-
      public static boolean isMovieNull(Movie movie){return movie==null;}
 
 

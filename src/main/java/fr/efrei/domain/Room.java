@@ -9,7 +9,6 @@ public class Room {
 
     private Room() {
     }
-
     private Room (Builder builder){
         this.room_number = builder.room_number;
         this.tab_seat = builder.tab_seat;
