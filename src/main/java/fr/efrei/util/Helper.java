@@ -1,4 +1,5 @@
 package fr.efrei.util;
+import fr.efrei.domain.Movie;
 
 public class Helper {
 
@@ -13,6 +14,8 @@ public class Helper {
     public static boolean isTabNullOrZero(int[][] n){
         return  n == null;
     }
+
+     public static boolean isMovieNull(Movie movie){return movie==null;}
 
 
 }
