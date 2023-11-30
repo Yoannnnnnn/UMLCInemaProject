@@ -3,6 +3,8 @@ import fr.efrei.domain.Room;
 import fr.efrei.domain.Movie;
 import fr.efrei.util.Helper;
 
+
+
 public class RoomFactory {
     public static Room createRoom(int room_number, int[][] tab_seat, Movie movie ) {
         if (Helper.isNullOrZero(room_number)) {
