@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1752aad3-848e-4ab9-9016-0911cc7da8c5" name="Changes" comment="CinemaFactory update + Helper">
+    <list default="true" id="1752aad3-848e-4ab9-9016-0911cc7da8c5" name="Changes" comment="Project from now">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/efrei/domain/Adult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/efrei/domain/Adult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/efrei/domain/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/efrei/domain/Person.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +72,9 @@
       <workItem from="1700749216525" duration="3966000" />
       <workItem from="1700773833923" duration="389000" />
       <workItem from="1701157286144" duration="6738000" />
-      <workItem from="1701173043771" duration="2018000" />
+      <workItem from="1701173043771" duration="3489000" />
+      <workItem from="1701186036957" duration="968000" />
+      <workItem from="1701289909472" duration="5000" />
     </task>
     <task id="LOCAL-00001" summary="I created Movie class">
       <created>1700415033571</created>
@@ -121,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701173405221</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Project from now">
+      <created>1701175112192</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1701175112192</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,6 +158,7 @@
     <MESSAGE value="I updated the MovieFactory" />
     <MESSAGE value="I updated the CinemaFactory, Person factory was done by Arthur" />
     <MESSAGE value="CinemaFactory update + Helper" />
-    <option name="LAST_COMMIT_MESSAGE" value="CinemaFactory update + Helper" />
+    <MESSAGE value="Project from now" />
+    <option name="LAST_COMMIT_MESSAGE" value="Project from now" />
   </component>
 </project>
