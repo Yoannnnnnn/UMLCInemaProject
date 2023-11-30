@@ -3,23 +3,20 @@ import fr.efrei.domain.Movie;
 import fr.efrei.util.Helper;
 
 public class MovieFactory {
-    public static Movie createMovie(String title) {
-        if (Helper.isNullOrEmpty(title))
+    public static Movie createMovie(String title, String description, int age_restriction, int runningTime, int scheduled, int ticketPrice) {
+        if (Helper.isNullOrEmpty(title) || Helper.isNullOrEmpty(description))
+            return null;
+
+        if (Helper.isNullOrZero(age_restriction) || Helper.isNullOrZero(runningTime) || Helper.isNullOrZero(scheduled) || Helper.isNullOrZero(ticketPrice))
             return null;
 
         return new Movie.Builder()
                 .setTitle(title)
-                .build();
-    }
-
-    public static Movie createMovie(int age_restriction, int duration, int schedule) {
-        if (Helper.isNullOrZero(age_restriction) || Helper.isNullOrZero(duration) || Helper.isNullOrZero(schedule))
-            return null;
-
-        return new Movie.Builder()
+                .setDescription(description)
                 .setAge_restriction(age_restriction)
-                .setDuration(duration)
-                .setSchedule(schedule)
+                .setRunningTime(runningTime)
+                .setSchedule(scheduled)
+                .setTicketPrice(ticketPrice)
                 .build();
     }
 }

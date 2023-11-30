@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1752aad3-848e-4ab9-9016-0911cc7da8c5" name="Changes" comment="Project from now">
+    <list default="true" id="1752aad3-848e-4ab9-9016-0911cc7da8c5" name="Changes" comment="Big update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/efrei/domain/Adult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/efrei/domain/Adult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/efrei/domain/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/efrei/domain/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/efrei/domain/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/efrei/domain/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/efrei/factory/MovieFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/efrei/factory/MovieFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +75,8 @@
       <workItem from="1701173043771" duration="3489000" />
       <workItem from="1701186036957" duration="968000" />
       <workItem from="1701289909472" duration="5000" />
+      <workItem from="1701334304830" duration="1702000" />
+      <workItem from="1701336024652" duration="157000" />
     </task>
     <task id="LOCAL-00001" summary="I created Movie class">
       <created>1700415033571</created>
@@ -132,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701175112192</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Big update">
+      <created>1701334507593</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1701334507593</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,6 +168,7 @@
     <MESSAGE value="I updated the CinemaFactory, Person factory was done by Arthur" />
     <MESSAGE value="CinemaFactory update + Helper" />
     <MESSAGE value="Project from now" />
-    <option name="LAST_COMMIT_MESSAGE" value="Project from now" />
+    <MESSAGE value="Big update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Big update" />
   </component>
 </project>
