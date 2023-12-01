@@ -1,4 +1,7 @@
 package fr.efrei.repository;
 
-public interface IMovieRepository {
+import fr.efrei.domain.Movie;
+import java.util.List;
+public interface IMovieRepository extends IRepository<Movie, String> {
+    public List<Movie> getAll();
 }
