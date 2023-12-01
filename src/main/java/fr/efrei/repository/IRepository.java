@@ -2,8 +2,8 @@ package fr.efrei.repository;
 
 public interface IRepository <T, string>{
     public T create(T t);
-    public T read(string stuff);
+    public T read(string movie);
     public T update(T t);
-    public boolean delete(String stuff);
+    public boolean delete(String movie);
 
 }
