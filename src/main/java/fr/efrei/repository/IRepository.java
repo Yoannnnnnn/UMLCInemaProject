@@ -1,9 +1,9 @@
 package fr.efrei.repository;
 
-public interface IRepository <T, ID>{
+public interface IRepository <T, string, Room>{
     public T create(T t);
-    public T read(ID id);
+    public T read(string stuff);
     public T update(T t);
+    public boolean delete(String stuff);
 
-    public boolean delete(ID id);
 }
