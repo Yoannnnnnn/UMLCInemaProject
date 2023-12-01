@@ -1,6 +1,6 @@
 package fr.efrei.repository;
 
-public interface IRepository <T, string, Room>{
+public interface IRepository <T, string>{
     public T create(T t);
     public T read(string stuff);
     public T update(T t);
