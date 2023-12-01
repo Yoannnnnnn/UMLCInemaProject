@@ -52,7 +52,7 @@ public class MovieRepository implements IMovieRepository{
     }
 
     @Override
-    public boolean delete (String title){
+    public boolean delete(String title){
         Movie movieToDelete = read(title);
         boolean success = movieDB.remove(movieToDelete);
         return success;
