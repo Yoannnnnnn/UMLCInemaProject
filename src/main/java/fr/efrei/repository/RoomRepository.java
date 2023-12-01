@@ -42,23 +42,24 @@ public class RoomRepository implements IRoomRepository {
         return null;
     }
 
+
     @Override
-    public Room create(Room room) {
+    public Integer create(Integer integer) {
         return null;
     }
 
     @Override
-    public Room read(Integer stuff) {
+    public Integer read(String movie) {
         return null;
     }
 
     @Override
-    public Room update(Room room) {
+    public Integer update(Integer integer) {
         return null;
     }
 
     @Override
-    public boolean delete(String stuff) {
+    public boolean delete(String title) {
         return false;
     }
 }
