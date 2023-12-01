@@ -5,5 +5,4 @@ public interface IRepository <T, string>{
     public T read(string movie);
     public T update(T t);
     public boolean delete(String title);
-
 }
