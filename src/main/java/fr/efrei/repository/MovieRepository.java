@@ -40,6 +40,7 @@ public class MovieRepository implements IMovieRepository{
         return null;
     }
 
+
     @Override
     public Movie update (Movie newMovie){
         Movie OldMovie = read(newMovie.getTitle());
@@ -55,6 +56,11 @@ public class MovieRepository implements IMovieRepository{
         return null;
     }
 
+    @Override
+    public void read(String[][] seatArray) {
+
+    }
+
 
     @Override
     public boolean delete(String title){
@@ -68,3 +74,4 @@ public class MovieRepository implements IMovieRepository{
         return movieDB;
     }
 }
+
