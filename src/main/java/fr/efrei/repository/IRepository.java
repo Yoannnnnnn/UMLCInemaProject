@@ -1,8 +1,9 @@
 package fr.efrei.repository;
 
-public interface IRepository <T, string>{
+public interface IRepository<T, String> {
     public T create(T t);
-    public T read(string movie);
+    public T read(String movie);
+    public void read(String[][] seatArray);
     public T update(T t);
-    public boolean delete(String title);
+    boolean delete(String title);
 }

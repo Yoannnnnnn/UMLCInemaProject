@@ -1,23 +1,20 @@
 package fr.efrei.repository;
 
-import fr.efrei.domain.Room;
+
 import fr.efrei.domain.Movie;
+import fr.efrei.domain.Room;
 
 import java.util.List;
 
 public class RoomRepository implements IRoomRepository {
     private static RoomRepository repository = null;
-    private String[][] seatDB = null;
+    private Room[][] seatDB = null;
     final int numRows = 20;
     final int numColumns = 10;
 
     private RoomRepository() {
-        seatDB = new String[numRows][numColumns];
-        for (int i = 0; i < numRows; i++) {
-            for (int j = 0; j < numColumns; j++) {
-                seatDB[i][j] = "Available";
-            }
-        }
+        seatDB = new Room[numRows][numColumns];
+        // Initialize rooms and seats if needed
     }
 
     public static RoomRepository getRepository() {
@@ -36,12 +33,42 @@ public class RoomRepository implements IRoomRepository {
         }
     }
 
+
+
     @Override
-    public List<Movie> getAll() {
-        // Implementation
+    public void read(String[][] seatArray) {
+        if (seatArray == null) {
+            System.out.println("Seat array is null.");
+            return;
+        }
+
+        for (int i = 0; i < seatArray.length; i++) {
+            for (int j = 0; j < seatArray[i].length; j++) {
+                String seatStatus = seatArray[i][j];
+                String seatLabel = getSeatLabel(i, j);
+                System.out.print(seatLabel + ": " + seatStatus + "\t");
+            }
+            System.out.println();
+        }
+    }
+
+    private String getSeatLabel(int row, int column) {
+        char rowLabel = (char) ('A' + row);
+        int columnNumber = column + 1;
+        return rowLabel + Integer.toString(columnNumber);
+    }
+
+
+    @Override
+    public Integer update(Integer integer) {
         return null;
     }
 
+
+    @Override
+    public boolean delete(String title) {
+        return false;
+    }
 
     @Override
     public Integer create(Integer integer) {
@@ -51,15 +78,5 @@ public class RoomRepository implements IRoomRepository {
     @Override
     public Integer read(String movie) {
         return null;
-    }
-
-    @Override
-    public Integer update(Integer integer) {
-        return null;
-    }
-
-    @Override
-    public boolean delete(String title) {
-        return false;
     }
 }

@@ -1,6 +1,8 @@
 package fr.efrei.repository;
 
 import fr.efrei.domain.Movie;
+import fr.efrei.domain.Room;
+
 import java.util.List;
 import java.util.ArrayList;
 
@@ -26,8 +28,10 @@ public class MovieRepository implements IMovieRepository{
         }
     }
 
+
+
     @Override
-    public Movie read (String title){
+    public Movie read(String title){
         for(Movie movie : movieDB){
             if(movie.getTitle().equals(title)){
                 return movie;
@@ -50,6 +54,7 @@ public class MovieRepository implements IMovieRepository{
         }
         return null;
     }
+
 
     @Override
     public boolean delete(String title){
