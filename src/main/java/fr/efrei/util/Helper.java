@@ -22,14 +22,11 @@ public class Helper {
     }
 
     public static boolean addValueTo2DArray(String[][] seatDB, int row, int column, String value) {
-        // Check if row and column are within bounds
         if (row >= 0 && row < seatDB.length && column >= 0 && column < seatDB[0].length) {
-            // Add the value to the specified position in the 2D array
             seatDB[row][column] = value;
             return true;
 
         } else {
-            // Invalid row or column indices, handle accordingly
             System.out.println("Invalid row or column indices.");
             return false;
         }

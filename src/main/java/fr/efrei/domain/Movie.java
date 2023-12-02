@@ -4,8 +4,9 @@ public class Movie {
     private String title;
     private int age_restriction;
     private int runningTime;
-    private int scheduled;
-    private int ticketPrice;
+    private String releaseDate;
+    private int ticketPrice2D;
+    private int getTicketPrice3D;
     private String description;
 
 
@@ -21,12 +22,16 @@ public class Movie {
         return runningTime;
     }
 
-    public int getScheduled() {
-        return scheduled;
+    public String getReleaseDate() {
+        return releaseDate;
     }
 
-    public int getTicketPrice() {
-        return ticketPrice;
+    public int getTicketPrice2D() {
+        return ticketPrice2D;
+    }
+
+    public int getGetTicketPrice3D() {
+        return getTicketPrice3D;
     }
 
     public String getDescription() {
@@ -39,9 +44,10 @@ public class Movie {
     private Movie (Builder builder){
         this.age_restriction = builder.age_restriction;
         this.runningTime = builder.runningTime;
-        this.scheduled = builder.scheduled;
+        this.releaseDate = builder.releaseDate;
         this.title = builder.title;
-        this.ticketPrice = builder.ticketPrice;
+        this.ticketPrice2D = builder.ticketPrice2D;
+        this.getTicketPrice3D = builder.ticketPrice3D;
         this.description = builder.description;
     }
 
@@ -49,17 +55,19 @@ public class Movie {
         private String title;
         private int age_restriction;
         private int runningTime;
-        private int scheduled;
-        private int ticketPrice;
+        private String releaseDate;
+        private int ticketPrice2D;
+        private int ticketPrice3D;
         private String description;
 
 
-        public Builder(String title, int age_restriction, int runningTime, int scheduled, int ticketPrice, String description) {
+        public Builder(String title, int age_restriction, int runningTime, String releaseDate, int ticketPrice2D, int ticketPrice3D, String description) {
             this.title = title;
             this.age_restriction = age_restriction;
             this.runningTime = runningTime;
-            this.scheduled = scheduled;
-            this.ticketPrice = ticketPrice;
+            this.releaseDate = releaseDate;
+            this.ticketPrice2D = ticketPrice2D;
+            this.ticketPrice3D = ticketPrice3D;
             this.description = description;
         }
 
@@ -82,13 +90,17 @@ public class Movie {
             return this;
         }
 
-        public Builder setSchedule(int scheduled) {
-            this.scheduled = scheduled;
+        public Builder setReleaseDate(String releaseDate) {
+            this.releaseDate = releaseDate;
             return this;
         }
 
-        public Builder setTicketPrice(int ticketPrice) {
-            this.ticketPrice = ticketPrice;
+        public Builder setTicketPrice2D(int ticketPrice2D) {
+            this.ticketPrice2D = ticketPrice2D;
+            return this;
+        }
+        public Builder setTicketPrice3D(int ticketPrice3D) {
+            this.ticketPrice3D = ticketPrice3D;
             return this;
         }
 
