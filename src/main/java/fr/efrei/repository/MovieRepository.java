@@ -22,9 +22,35 @@ public class MovieRepository implements IMovieRepository {
 
     @Override
     public Movie create(Movie movie) {
-        boolean success = movieDB.add(movie);
-        return success ? movie : null;
+        // Add the movie if the repository is empty
+        if (movieDB.isEmpty()) {
+            movieDB.add(movie);
+            System.out.println("Movie added successfully!");
+        } else {
+            // Search for a movie with the same release date
+            boolean found = false;
+            for (int i = 0; i < movieDB.size(); i++) {
+                if (movieDB.get(i).getReleaseDate().equals(movie.getReleaseDate())) {
+                    // Replace the existing movie with the new one
+                    movieDB.set(i, movie);
+                    found = true;
+                    System.out.println("Movie updated successfully!");
+                    break;
+                }
+            }
+
+            // If no movie with the same release date is found, add the new movie
+            if (!found) {
+                movieDB.add(movie);
+                System.out.println("Movie added successfully!");
+            }
+        }
+
+        // Return the created or updated movie
+        return movie;
     }
+
+
 
     @Override
     public Movie read(String title) {

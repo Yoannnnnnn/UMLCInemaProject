@@ -13,28 +13,60 @@ import static fr.efrei.Main.listAllMovies;
 
 public class MovieView {
 
-    public static void addMovie() {
-        Scanner sc = new Scanner(System.in);
 
+
+    public static void addMovie() {
+        Scanner scanner = new Scanner(System.in);
+
+        // Get movie details from the user
         System.out.println("Enter movie title: ");
-        String title = sc.nextLine();
+        String title = scanner.nextLine();
 
         System.out.println("Enter age restriction: ");
-        int ageRestriction = sc.nextInt();
+        int ageRestriction = scanner.nextInt();
 
         System.out.println("Enter running time: ");
-        int runningTime = sc.nextInt();
+        int runningTime = scanner.nextInt();
 
-        sc.nextLine();
+        scanner.nextLine(); // Consume the newline character
 
         System.out.println("Enter release date (yyyy-MM-dd): ");
-        String releaseDateInput = sc.nextLine();
+        String releaseDateInput = scanner.nextLine();
         LocalDate releaseDate = LocalDate.parse(releaseDateInput, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
 
         System.out.println("Enter description: ");
-        String description = sc.nextLine();
+        String description = scanner.nextLine();
 
-        sc.close();
+        System.out.println("Enter 2D ticket price: ");
+        int ticketPrice2D = scanner.nextInt();
+
+        System.out.println("Enter 3D ticket price: ");
+        int ticketPrice3D = scanner.nextInt();
+
+        // Check the current number of movies
+        int currentNumberOfMovies = MovieRepository.getRepository().getAll().size();
+
+        if (currentNumberOfMovies < 12) {
+            // Proceed to add a new movie
+            System.out.println("Adding a new movie...");
+
+            // Create a new Movie object
+            Movie newMovie = new Movie.Builder()
+                    .setTitle(title)
+                    .setAge_restriction(ageRestriction)
+                    .setRunningTime(runningTime)
+                    .setReleaseDate(releaseDateInput)
+                    .setDescription(description)
+                    .setTicketPrice2D(ticketPrice2D)
+                    .setTicketPrice3D(ticketPrice3D)
+                    .build();
+
+            // Add the new movie to the repository
+            MovieRepository.getRepository().create(newMovie);
+            System.out.println("Movie added successfully!");
+        } else {
+            System.out.println("Sorry, you cannot add more movies. The maximum limit (12) has been reached.");
+        }
     }
 
 

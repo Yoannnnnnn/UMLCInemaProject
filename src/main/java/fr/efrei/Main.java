@@ -413,37 +413,42 @@
         }
 
 
-        private static void manageMovies() {
+        public static void manageMovies() {
             while (true) {
                 System.out.println("Movie Management Menu:");
                 System.out.println("1. Add Movie");
                 System.out.println("2. Update Movie");
                 System.out.println("3. Delete Movie");
-                System.out.println("4. List All Movies");
-                System.out.println("5. Return to Homepage");
+                System.out.println("4. Return to Homepage");
 
-                int movieManagementChoice = scanner.nextInt();
+                // Check if there's input available
+                if (scanner.hasNextInt()) {
+                    int movieManagementChoice = scanner.nextInt();
 
-                switch (movieManagementChoice) {
-                    case 1:
-                        addMovie();
-                        break;
-                    case 2:
-                        updateMovie();
-                        break;
-                    case 3:
-                        deleteMovie();
-                        break;
-                    case 4:
-                        listAllMovies();
-                        break;
-                    case 5:
-                        return;
-                    default:
-                        System.out.println("Invalid choice. Please enter a valid option.");
+                    switch (movieManagementChoice) {
+                        case 1:
+                            addMovie();
+                            break;
+                        case 2:
+                            updateMovie();
+                            break;
+                        case 3:
+                            deleteMovie();
+                            break;
+                        case 4:
+                            return;
+                        default:
+                            System.out.println("Invalid choice. Please enter a valid option.");
+                    }
+                } else {
+                    // Handle the case when no integer is entered
+                    System.out.println("Invalid input. Please enter a number.");
+                    scanner.next(); // Consume the invalid input to avoid an infinite loop
                 }
             }
         }
+
+
 
         public static void deleteMovie() {
             // Display available movies for the user to choose from
