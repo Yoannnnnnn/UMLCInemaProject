@@ -1,12 +1,15 @@
 package fr.efrei.domain;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 public class Movie {
     private String title;
     private int age_restriction;
     private int runningTime;
     private String releaseDate;
     private int ticketPrice2D;
-    private int getTicketPrice3D;
+    private int ticketPrice3D;
     private String description;
 
 
@@ -30,8 +33,8 @@ public class Movie {
         return ticketPrice2D;
     }
 
-    public int getGetTicketPrice3D() {
-        return getTicketPrice3D;
+    public int getTicketPrice3D() {
+        return ticketPrice3D;
     }
 
     public String getDescription() {
@@ -47,7 +50,7 @@ public class Movie {
         this.releaseDate = builder.releaseDate;
         this.title = builder.title;
         this.ticketPrice2D = builder.ticketPrice2D;
-        this.getTicketPrice3D = builder.ticketPrice3D;
+        this.ticketPrice3D = builder.ticketPrice3D;
         this.description = builder.description;
     }
 
@@ -91,7 +94,7 @@ public class Movie {
         }
 
         public Builder setReleaseDate(String releaseDate) {
-            this.releaseDate = releaseDate;
+            this.releaseDate = String.valueOf(LocalDate.parse(releaseDate, DateTimeFormatter.ofPattern("yyyy-MM-dd")));
             return this;
         }
 

@@ -60,7 +60,12 @@ public class RoomRepository implements IRoomRepository {
 
 
     @Override
-    public Integer update(Integer integer) {
+    public Integer update(Integer existingEntity, Integer integer) {
+        return null;
+    }
+
+    @Override
+    public Movie update(Movie updatedMovie) {
         return null;
     }
 

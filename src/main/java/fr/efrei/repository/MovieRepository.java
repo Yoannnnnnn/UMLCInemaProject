@@ -1,56 +1,36 @@
 package fr.efrei.repository;
 
 import fr.efrei.domain.Movie;
-import fr.efrei.domain.Room;
 
 import java.util.List;
 import java.util.ArrayList;
 
-public class MovieRepository implements IMovieRepository{
+public class MovieRepository implements IMovieRepository {
     private static MovieRepository repository = null;
     private List<Movie> movieDB = null;
-    private MovieRepository(){movieDB = new ArrayList<Movie>();}
-    public static MovieRepository getRepository(){
-        if (repository == null){
+
+    private MovieRepository() {
+        movieDB = new ArrayList<>();
+    }
+
+    public static MovieRepository getRepository() {
+        if (repository == null) {
             repository = new MovieRepository();
         }
         return repository;
     }
 
     @Override
-    public Movie create (Movie movie){
+    public Movie create(Movie movie) {
         boolean success = movieDB.add(movie);
-        if(success){
-            return movie;
-        }
-        else {
-            return null;
-        }
+        return success ? movie : null;
     }
 
-
-
     @Override
-    public Movie read(String title){
-        for(Movie movie : movieDB){
-            if(movie.getTitle().equals(title)){
+    public Movie read(String title) {
+        for (Movie movie : movieDB) {
+            if (movie.getTitle().equals(title)) {
                 return movie;
-            }
-        }
-        return null;
-    }
-
-
-    @Override
-    public Movie update (Movie newMovie){
-        Movie OldMovie = read(newMovie.getTitle());
-        if (OldMovie == null){
-            boolean successAdded = movieDB.add(newMovie);
-            if(successAdded){
-                return newMovie;
-            }
-            else{
-                return null;
             }
         }
         return null;
@@ -61,17 +41,64 @@ public class MovieRepository implements IMovieRepository{
 
     }
 
-
     @Override
-    public boolean delete(String title){
-        Movie movieToDelete = read(title);
-        boolean success = movieDB.remove(movieToDelete);
-        return success;
+    public Movie update(Movie existingEntity, Movie updatedEntity) {
+        return null;
     }
 
     @Override
-    public List <Movie> getAll(){
-        return movieDB;
+    public Movie update(Movie updatedMovie) {
+        Movie existingMovie = read(updatedMovie.getTitle());
+
+        if (existingMovie != null) {
+            // Remove the existing movie from the list
+            movieDB.remove(existingMovie);
+
+            // Add the updated movie to the list
+            boolean successAdded = movieDB.add(updatedMovie);
+
+            if (successAdded) {
+                return updatedMovie;
+            } else {
+                // If adding the updated movie fails, re-add the existing movie
+                movieDB.add(existingMovie);
+            }
+        }
+
+        return null;
+    }
+
+    @Override
+    public boolean delete(String title) {
+        Movie movieToDelete = read(title);
+        return movieToDelete != null && movieDB.remove(movieToDelete);
+    }
+
+    @Override
+    public List<Movie> getAll() {
+        return new ArrayList<>(movieDB);
+    }
+
+    public Movie getMovieByTitle(String title) {
+        for (Movie movie : movieDB) {
+            if (movie.getTitle().equalsIgnoreCase(title)) {
+                return movie;
+            }
+        }
+        return null;
+    }
+
+    public List<Movie> getMoviesByYear(int year) {
+        List<Movie> moviesByYear = new ArrayList<>();
+
+        for (Movie movie : movieDB) {
+            int movieYear = Integer.parseInt(movie.getReleaseDate().substring(0, 4));
+
+            if (movieYear == year) {
+                moviesByYear.add(movie);
+            }
+        }
+
+        return moviesByYear;
     }
 }
-
