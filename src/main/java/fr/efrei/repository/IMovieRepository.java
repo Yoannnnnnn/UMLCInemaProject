@@ -6,4 +6,5 @@ import java.util.List;
 public interface IMovieRepository extends IRepository<Movie, String> {
 
     public List<Movie> getAll();
+    boolean deleteByTitle(String title);  // Add this line
 }

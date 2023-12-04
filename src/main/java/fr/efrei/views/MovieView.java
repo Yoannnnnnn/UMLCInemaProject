@@ -8,6 +8,9 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Scanner;
 
+import static fr.efrei.Main.deleteMovie;
+import static fr.efrei.Main.listAllMovies;
+
 public class MovieView {
 
     public static void addMovie() {
@@ -35,23 +38,7 @@ public class MovieView {
     }
 
 
-    public static void deleteMovie() {
-        Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter the title of the movie you want to delete: ");
-        String titleToDelete = sc.nextLine();
-
-        MovieRepository movieRepository = MovieRepository.getRepository();
-        boolean deleted = movieRepository.delete(titleToDelete);
-
-        if (deleted) {
-            System.out.println("Movie deleted successfully.");
-        } else {
-            System.out.println("Movie not found or deletion failed.");
-        }
-
-        sc.close();
-    }
 
     private static Scanner scanner = new Scanner(System.in);
     public static void manageMovies() {
@@ -84,7 +71,7 @@ public class MovieView {
         }
     }
 
-    private static void updateMovie() {
+    public static void updateMovie() {
     }
 
     // Method to check if there are already 12 movies for the given year

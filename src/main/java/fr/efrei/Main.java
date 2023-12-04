@@ -11,6 +11,8 @@
 
     import java.util.*;
 
+    import static fr.efrei.views.MovieView.*;
+
     public class Main {
         private static IRoomRepository roomRepository = RoomRepository.getRepository();
         private static Scanner scanner = new Scanner(System.in);
@@ -409,6 +411,75 @@
             System.out.println("Ticket Price: $" + movie.getTicketPrice2D()); // Assuming 2D ticket price for simplicity
             System.out.println("**************************************");
         }
+
+
+        private static void manageMovies() {
+            while (true) {
+                System.out.println("Movie Management Menu:");
+                System.out.println("1. Add Movie");
+                System.out.println("2. Update Movie");
+                System.out.println("3. Delete Movie");
+                System.out.println("4. List All Movies");
+                System.out.println("5. Return to Homepage");
+
+                int movieManagementChoice = scanner.nextInt();
+
+                switch (movieManagementChoice) {
+                    case 1:
+                        addMovie();
+                        break;
+                    case 2:
+                        updateMovie();
+                        break;
+                    case 3:
+                        deleteMovie();
+                        break;
+                    case 4:
+                        listAllMovies();
+                        break;
+                    case 5:
+                        return;
+                    default:
+                        System.out.println("Invalid choice. Please enter a valid option.");
+                }
+            }
+        }
+
+        public static void deleteMovie() {
+            // Display available movies for the user to choose from
+            listAllMovies();
+
+            // Prompt the user for the title of the movie to delete
+            System.out.println("Enter the title of the movie you want to delete:");
+            String movieToDelete = scanner.next();
+
+            // Remove the movie from the repository
+            boolean deleted = MovieRepository.getRepository().deleteByTitle(movieToDelete);
+
+            if (deleted) {
+                System.out.println("Movie deleted successfully!");
+            } else {
+                System.out.println("Movie not found. Deletion failed.");
+            }
+        }
+
+
+            public static void listAllMovies() {
+                // Retrieve and display all movies from the repository
+                List<Movie> movies = MovieRepository.getRepository().getAll();
+
+                if (movies.isEmpty()) {
+                    System.out.println("No movies available.");
+                } else {
+                    System.out.println("List of All Movies:");
+                    for (Movie movie : movies) {
+                        System.out.println("Title: " + movie.getTitle() + " - Release Date: " + movie.getReleaseDate());
+                    }
+                }
+            }
+
+
+
 
 
         public static void main(String[] args) {

@@ -79,6 +79,17 @@ public class MovieRepository implements IMovieRepository {
         return new ArrayList<>(movieDB);
     }
 
+    @Override
+    public boolean deleteByTitle(String title) {
+        Movie movieToDelete = read(title);
+
+        if (movieToDelete != null) {
+            return movieDB.remove(movieToDelete);
+        }
+
+        return false;
+    }
+
     public Movie getMovieByTitle(String title) {
         for (Movie movie : movieDB) {
             if (movie.getTitle().equalsIgnoreCase(title)) {
